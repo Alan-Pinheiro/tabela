@@ -1,5 +1,22 @@
+:root {
+    --text-color: white; 
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --switch-bg-url: url(./assets/MoonStars.svg);
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url(.assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --switch-bg-url: url(./assets/Sun.svg);
+
+}
+
 body {
-    background-image: url(./assets/bg-mobile.jpg);
+    background-image: var(--bg-url);
     background-repeat: no-repeat; 
     background-position: top center;
     background-size: cover; 
@@ -14,20 +31,22 @@ body {
     box-sizing: border-box;
 }
 
+
 body * {
   font-family: "Inter", sans-serif;
-  color: white;
+  color: var(--text-color);
 }
+
 
 .conteiner {
     border: 1px solid grey;
     width: 588px;
-    height: 712px;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 24px;
+    border-radius: 5px;
 }
 
 #user{
@@ -38,10 +57,59 @@ body * {
 }
 
 #switch {
-    font-size: 10px;
-    border: 1px solid gray;
+    display: block;
+    padding-top: 8px;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border: 0;
+    border-radius: 50%;
+    background-image: var(--switch-bg-url);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 9999px;
+}
+
+#switch span {
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
 }
 
 .links {
-    border: 1px solid gray;  
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 540px;
+    text-align: center;
+    list-style-type: none;
+    margin-top: 8px;
+}
+
+ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: rgb(255, 255, 255, 0.1);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+ul li a:hover {
+    background: var(--surface-color);
+    border: 1.5px solid var(--text-color);
+}
+
+.social_links {
+    display: flex;
+    gap: 16px;
+    text-align: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 24px;
 }
