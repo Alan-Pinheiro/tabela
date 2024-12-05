@@ -3,16 +3,45 @@ body {
     background-repeat: no-repeat; 
     background-position: top center;
     background-size: cover; 
+    padding-top: 56px;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: white;
 }
 
 .conteiner {
-    border: 1px solid green;
+    border: 1px solid grey;
     width: 588px;
     height: 712px;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 24px;
+    padding: 24px;
 }
 
+#user{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+#switch {
+    font-size: 10px;
+    border: 1px solid gray;
+}
+
+.links {
+    border: 1px solid gray;  
+}
