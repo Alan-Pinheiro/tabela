@@ -1,0 +1,18 @@
+body {
+    background-image: url(./assets/bg-mobile.jpg);
+    background-repeat: no-repeat; 
+    background-position: top center;
+    background-size: cover; 
+}
+
+.conteiner {
+    border: 1px solid green;
+    width: 588px;
+    height: 712px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 24px;
+}
+
